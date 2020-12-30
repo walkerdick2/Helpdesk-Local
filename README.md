@@ -14,6 +14,7 @@
   - What kind of database?
   - See Below!
 - [ ] Setup Mongoose Model
+- [ ] Setup API
 - [ ] Post /tickets
   - Log ticket entries
 - [ ] GET /tickets
