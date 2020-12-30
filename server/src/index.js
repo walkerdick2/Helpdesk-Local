@@ -8,7 +8,14 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
+const mongoose = require('mongoose')
+
 const middleware = require('./middleware')
+
+mongoose.connect(process.env.MONGO_URL,{
+    useNewUrlParser: true,
+})
+
 
 
 const app = express();

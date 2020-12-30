@@ -22,5 +22,9 @@ var TicketSchema = new mongoose.Schema({
 
 },
 {
-    timestamps: true
+    timestamps: true,
 })
+
+
+const ticketentry = mongoose.model('Ticketentry',TicketSchema)
+module.exports = ticketentry;
