@@ -9,7 +9,7 @@
     - [X] Install / Setup Linter
     - [X] Setup Express App
     - [X] Setup Not found and Error Middleware
-- [ ] Model DB
+- [X] Model DB
   - What kind of Data?
   - What kind of database?
   - See Below!
