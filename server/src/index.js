@@ -1,7 +1,12 @@
 const express = require('express');
+const morgan = require('morgan');
+const helmet = require('helmet');
 
-const app = express;
-const port = 1337 ;
-app.listen(port, () =>{
-    console.log('Listening at HTTP://localhost:1337');
+
+const app = express();
+app.use(morgan('common'));
+
+const port = 14476 ;
+app.listen(port, () => {
+    console.log('Server is running on localhost at ' + port);
 })
