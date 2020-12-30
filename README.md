@@ -7,7 +7,7 @@
 - [ ] Setup Server
   - [X] Install Dependencies
     - [X] Install / Setup Linter
-    - [ ] Setup Express App
+    - [X] Setup Express App
     - [ ] Setup Not found and Error Middleware
 - [ ] Model DB
   - What kind of Data?
