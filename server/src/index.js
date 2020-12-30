@@ -8,25 +8,28 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-/* const mongoose = require('mongoose') */
+const mongoose = require('mongoose') 
 
 require('dotenv').config;
 
 const middleware = require('./middleware')
 const tickets = require('./api/tickets')
-/*
-mongoose.connect(process.env.MONGO_URL,{
-    useNewUrlParser: true,
-})
-*/
-
-
 const app = express();
+
+mongoose.connect("mongodb://localhost:27017/helpdesk-local", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+
+
+
 app.use(morgan('tiny'));
 app.use(helmet());
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
 }));
+app.use(express.json());
 
 
 app.get('/', (req, res) => {
