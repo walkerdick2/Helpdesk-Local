@@ -29,12 +29,12 @@
 - Tables
   - [ ] Ticket Entry
     - Rows
-      - [ ] ID
-      - [ ] FNAME
-      - [ ] LNAME
-      - [ ] EMAIL
-      - [ ] PROBLEM CATEGORY
-      - [ ] PROBLEM TEXT
-      - [ ] URGENCY
-      - [ ] IMPACT
-      - [ ] SUBMISSIONDATE
+      - [ ] ID - Number
+      - [ ] FNAME - Text
+      - [ ] LNAME - Text
+      - [ ] EMAIL - Text (No Validation)
+      - [ ] PROBLEM CATEGORY - Lookup
+      - [ ] PROBLEM TEXT - Text
+      - [ ] URGENCY - Lookup
+      - [ ] IMPACT- Lookup
+      - [ ] SUBMISSIONDATE - Date/Time
