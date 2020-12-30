@@ -4,10 +4,14 @@ const Ticketentrys = require('../model/ticket')
 
 const router = Router();
 
-router.get('/', (req,res,next) => {
-    res.json({
-        message: '🎧'
-    })
+router.get('/', async (req,res,next) => {
+    try {
+        const entries = await Ticketentrys.find();
+res.json(entries)
+    } catch (error) {
+      next(error)  
+    }
+
 })
 
 router.post('/', async (req, res,next) =>{

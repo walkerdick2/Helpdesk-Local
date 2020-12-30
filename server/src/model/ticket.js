@@ -8,7 +8,6 @@ const requiredStr = {
     required: true}
 
 var TicketSchema = new mongoose.Schema({
-    ID: requiredNum,
     FNAME: requiredStr,
     LNAME: requiredStr,
     EMAIL: requiredStr,
@@ -18,6 +17,11 @@ var TicketSchema = new mongoose.Schema({
         min: 0,
         max: 5,
         default: 3,
+        required: true
+    },
+    STATUS: {
+        type: String,
+        default: "NEW",
     },
 
 },
