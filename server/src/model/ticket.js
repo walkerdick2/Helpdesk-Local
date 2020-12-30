@@ -7,8 +7,6 @@ const requiredStr = {
     type: String,
     required: true}
 
-const DefaultDate = {type: Date, default: Date.now, require:true}
-
 var TicketSchema = new mongoose.Schema({
     ID: requiredNum,
     FNAME: requiredStr,
@@ -21,6 +19,8 @@ var TicketSchema = new mongoose.Schema({
         max: 5,
         default: 3,
     },
-    CREATED_AT: DefaultDate,
-    UPDATED_AT: DefaultDate 
+
+},
+{
+    timestamps: true
 })
