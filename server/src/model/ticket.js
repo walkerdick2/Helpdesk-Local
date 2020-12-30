@@ -7,7 +7,7 @@ const requiredStr = {
     type: String,
     required: true}
 
-const DefaultDate = {type: Date, default: Date.now}
+const DefaultDate = {type: Date, default: Date.now, require:true}
 
 var TicketSchema = new mongoose.Schema({
     ID: requiredNum,
