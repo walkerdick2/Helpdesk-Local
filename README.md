@@ -22,6 +22,17 @@
 
 ---
 
-## Database Layout
+## Database Layout ##
 
-- 
+- Tables
+  - [ ] Ticket Entry
+    - Rows
+      - [ ] ID
+      - [ ] FNAME
+      - [ ] LNAME
+      - [ ] EMAIL
+      - [ ] PROBLEM CATEGORY
+      - [ ] PROBLEM TEXT
+      - [ ] URGENCY
+      - [ ] IMPACT
+      - [ ] SUBMISSIONDATE
