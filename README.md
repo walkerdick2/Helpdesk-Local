@@ -8,7 +8,7 @@
   - [X] Install Dependencies
     - [X] Install / Setup Linter
     - [X] Setup Express App
-    - [ ] Setup Not found and Error Middleware
+    - [X] Setup Not found and Error Middleware
 - [ ] Model DB
   - What kind of Data?
 - [ ] Setup Mongoose Model(s)

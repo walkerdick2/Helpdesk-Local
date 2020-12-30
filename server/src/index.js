@@ -8,6 +8,7 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
+const middleware = require('./middleware')
 
 
 const app = express();
@@ -24,20 +25,8 @@ app.get('/', (req, res) => {
     });
 });
 
-app.use((req, res, next) => {
-    const error = new Error('This is not the route you are looking for -  ' +  "| " +  req.originalUrl + " |" + ' -- Sorry 🤷‍♂️!') ;
-    res.status(404);
-    next(error);
-});
-
-app.use((error, req, res, next) => {
-    const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
-    res.status(statusCode);
-    res.json({
-        message: error.message,
-        stack: process.env.NODE_ENV === 'production' ? '🥞'  : error.stack
-    })
-})
+app.use(middleware.notFound);
+app.use(middleware.errorHandler)
 
 const port = 14476;
 app.listen(port, () => {
