@@ -27,14 +27,13 @@
 ## Database Layout ##
 
 - Tables
-  - [ ] Ticket Entry
+  - [X] Ticket Entry
     - Rows
-      - [ ] ID - Number
-      - [ ] FNAME - Text
-      - [ ] LNAME - Text
-      - [ ] EMAIL - Text (No Validation)
-      - [ ] PROBLEM CATEGORY - Lookup
-      - [ ] PROBLEM TEXT - Text
-      - [ ] URGENCY - Lookup
-      - [ ] IMPACT- Lookup
-      - [ ] SUBMISSIONDATE - Date/Time
+      - [X] ID - Number
+      - [X] FNAME - Text
+      - [X] LNAME - Text
+      - [X] EMAIL - Text (No Validation)
+      - [X] PROBLEM - Text
+      - [X] URGENCY - Number 0 - 5
+      - [X]CREATED AT - Date/Time
+      - [X] UPDATED AT - Date/Time
