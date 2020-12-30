@@ -19,3 +19,9 @@
 - [ ] Setup a Client
   - [ ] Create a UI for Support Agents
   - [ ] Create a UI for Ticket Submission
+
+---
+
+## Database Layout
+
+- 
