@@ -11,7 +11,9 @@
     - [X] Setup Not found and Error Middleware
 - [ ] Model DB
   - What kind of Data?
-- [ ] Setup Mongoose Model(s)
+  - What kind of database?
+  - See Below!
+- [ ] Setup Mongoose Model
 - [ ] Post /tickets
   - Log ticket entries
 - [ ] GET /tickets
