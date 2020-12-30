@@ -5,8 +5,8 @@
  TODO
 
 - [ ] Setup Server
-  - [ ] Install Dependencies
-    - [ ] Install / Setup Linter
+  - [X] Install Dependencies
+    - [X] Install / Setup Linter
     - [ ] Setup Express App
     - [ ] Setup Not found and Error Middleware
 - [ ] Model DB
