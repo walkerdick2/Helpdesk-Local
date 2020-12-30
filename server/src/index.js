@@ -8,21 +8,24 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-const mongoose = require('mongoose')
+/* const mongoose = require('mongoose') */
+
+require('dotenv').config;
 
 const middleware = require('./middleware')
-
+const tickets = require('./api/tickets')
+/*
 mongoose.connect(process.env.MONGO_URL,{
     useNewUrlParser: true,
 })
-
+*/
 
 
 const app = express();
 app.use(morgan('tiny'));
 app.use(helmet());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.CORS_ORIGIN,
 }));
 
 
@@ -32,10 +35,12 @@ app.get('/', (req, res) => {
     });
 });
 
+app.use('/api/tickets',tickets)
+
 app.use(middleware.notFound);
 app.use(middleware.errorHandler)
 
-const port = 14476;
+const port = process.env.PORT || 14476;
 app.listen(port, () => {
     console.log('Server is running on localhost at ' + port);
 });
