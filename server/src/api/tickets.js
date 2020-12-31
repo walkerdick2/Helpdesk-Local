@@ -31,4 +31,41 @@ router.post('/', async (req, res,next) =>{
 
 })
 
+router.get('/:id',async (req, res,next) =>{
+console.log(req.params.id)
+    try { 
+        console.log(req.params.id)
+        var ticketidfind = await Ticketentrys.findById(req.params.id).exec()
+        console.log(ticketidfind)
+        res.json(ticketidfind)
+    } catch (error) {
+        next(error)
+    }
+})
+
+
+router.delete('/',async (req,res,next) => {
+    try {
+        console.log(req.body.id)
+        var ticketid = await Ticketentrys.findByIdAndDelete(req.body.id).exec()
+        res.json({
+            message: 'Sucssesful Deletion of Ticket id: ' + req.body.id,
+        });
+    } catch (error) {
+        next(error)
+    }
+})
+router.patch('/', async (req,res,next) =>{
+try {
+    console.log(req.body.id)
+    res.json({
+        message: "Work in Progress! 🔃",
+        id: req.body.id,
+        
+    })
+} catch (error) {
+    next(error)
+}
+
+})
 module.exports = router;
