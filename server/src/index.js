@@ -19,7 +19,9 @@ const app = express();
 mongoose.connect("mongodb://localhost:27017/helpdesk-local", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false
 });
+
 
 
 

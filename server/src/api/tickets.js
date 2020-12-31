@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { findByIdAndUpdate } = require('../model/ticket');
 const Ticketentrys = require('../model/ticket')
 
 
@@ -58,11 +59,8 @@ router.delete('/',async (req,res,next) => {
 router.patch('/', async (req,res,next) =>{
 try {
     console.log(req.body.id)
-    res.json({
-        message: "Work in Progress! 🔃",
-        id: req.body.id,
-        
-    })
+    var ticketupdate = await Ticketentrys.findByIdAndUpdate(req.body.id,{STATUS: req.body.STATUS,URGENCY: req.body.URGENCY},{returnOriginal:false}).exec()
+    res.json(ticketupdate)
 } catch (error) {
     next(error)
 }

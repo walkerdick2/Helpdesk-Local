@@ -13,15 +13,21 @@
   - What kind of Data?
   - What kind of database?
   - See Below!
-- [ ] Setup Mongoose Model
-- [ ] Setup API
-- [ ] Post /tickets
+- [X] Setup Mongoose Model
+- [X] Setup API
+- [X] Post /tickets
   - Log ticket entries
-- [ ] GET /tickets
+- [X] GET /tickets
   - List ticket entries
+- [X] DELETE /tickets
+  - Delete Ticket
+- [X] PATCH /tickets
+  - Update Ticket
 - [ ] Setup a Client
   - [ ] Create a UI for Support Agents
   - [ ] Create a UI for Ticket Submission
+  - [ ] Create a UI for viewing Ticket Status
+  - [ ] Create a UI to Update Tickets
 
 ---
 
@@ -36,5 +42,5 @@
       - [X] EMAIL - Text (No Validation)
       - [X] PROBLEM - Text
       - [X] URGENCY - Number 0 - 5
-      - [X]CREATED AT - Date/Time
+      - [X] CREATED AT - Date/Time
       - [X] UPDATED AT - Date/Time

@@ -27,6 +27,7 @@ var TicketSchema = new mongoose.Schema({
 },
 {
     timestamps: true,
+    returnOriginal: false,
 })
 
 
