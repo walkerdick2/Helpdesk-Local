@@ -17,6 +17,9 @@ var TicketSchema = new mongoose.Schema({
         type: String,
         default: "NEW",
     },
+    COMMENTS: [{
+        BODY: String, AGENT: String
+    }]
 
 },
 {
