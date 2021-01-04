@@ -5,6 +5,7 @@
 /* eslint-disable no-multiple-empty-lines */
 /* eslint-disable linebreak-style */
 const express = require('express');
+const app = express();
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -14,7 +15,6 @@ require('dotenv').config;
 
 const middleware = require('./middleware')
 const tickets = require('./api/tickets')
-const app = express();
 
 mongoose.connect("mongodb://localhost:27017/helpdesk-local", {
     useNewUrlParser: true,
@@ -22,19 +22,24 @@ mongoose.connect("mongodb://localhost:27017/helpdesk-local", {
     useFindAndModify: false
 });
 
-
+var corsip = "*"
 
 
 
 app.use(morgan('tiny'));
 app.use(helmet());
-app.use(cors({
-    origin: process.env.CORS_ORIGIN,
-}));
+app.use(cors());
 app.use(express.json());
 
 
-app.get('/', (req, res) => {
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    res.header("Access-Control-Allow-Methods", "GET,PATCH,POST,DELETE");
+    next();
+  });
+  
+app.get('/', cors(), (req, res) => {
     res.json({
         message: 'Hello World',
     });
@@ -42,7 +47,7 @@ app.get('/', (req, res) => {
 
 
 
-app.use('/api/tickets',tickets)
+app.use('/api/tickets/',tickets)
 
 app.use(middleware.notFound);
 app.use(middleware.errorHandler)

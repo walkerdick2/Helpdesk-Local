@@ -25,6 +25,7 @@ router.post('/', async (req, res,next) =>{
         if(error1.name === 'ValidationError'){
             res.status(442);
         }
+        console.error(error1)
         next(error1)
     }
    
@@ -32,7 +33,7 @@ router.post('/', async (req, res,next) =>{
 
 })
 
-router.get('/:id',async (req, res,next) =>{
+router.get('/:id',async (req, res, next) =>{
 console.log(req.params.id)
     try { 
         console.log(req.params.id)
@@ -40,28 +41,31 @@ console.log(req.params.id)
         console.log(ticketidfind)
         res.json(ticketidfind)
     } catch (error) {
+        console.error(error)
         next(error)
     }
 })
 
 
-router.delete('/',async (req,res,next) => {
+router.delete('/:id1',async (req,res,next) => {
     try {
-        console.log(req.body.id)
-        var ticketid = await Ticketentrys.findByIdAndDelete(req.body.id).exec()
+        console.log(req.params.id1)
+        var ticketid = await Ticketentrys.findByIdAndDelete(req.params.id1).exec()
         res.json({
-            message: 'Sucssesful Deletion of Ticket id: ' + req.body.id,
+            message: 'Sucssesful Deletion of Ticket id: ' + req.params.id1
         });
     } catch (error) {
+        console.error(error)
         next(error)
     }
 })
-router.patch('/', async (req,res,next) =>{
+router.patch('/:pid', async (req,res,next) =>{
 try {
-    console.log(req.body.id)
-    var ticketupdate = await Ticketentrys.findByIdAndUpdate(req.body.id,{STATUS: req.body.STATUS,URGENCY: req.body.URGENCY},{returnOriginal:false}).exec()
+    console.log(req.params.pid)
+    var ticketupdate =  await Ticketentrys.findByIdAndUpdate(req.params.pid,{STATUS: req.body.STATUS,URGENCY: req.body.URGENCY},{returnOriginal:false}).exec()
     res.json(ticketupdate)
 } catch (error) {
+    console.error(error)
     next(error)
 }
 
