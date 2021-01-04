@@ -17,6 +17,7 @@ res.json(entries)
 
 router.post('/', async (req, res,next) =>{
     try {
+        console.log(req.body)
         const logentry = new Ticketentrys(req.body) 
         const createdentry = await logentry.save()
         res.json(createdentry)

@@ -12,7 +12,7 @@ var TicketSchema = new mongoose.Schema({
     LNAME: requiredStr,
     EMAIL: requiredStr,
     PROBLEM: requiredStr,
-    URGENCY: requiredStr,
+    IMPACT: requiredStr,
     STATUS: {
         type: String,
         default: "NEW",
