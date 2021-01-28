@@ -51,5 +51,5 @@ Note: The software depends on the following software:
     - If you clone this Github Repository you should have all of the packages.
     - You can install node.js here <https://nodejs.org/en/download/>
   - Mongo DB  
-  - Mongo DB Compass LocalDatabase installed on the same machine.
-  - You can download Mongo DB Compass Here <https://downloads.mongodb.com/compass/>
+    - Mongo DB Compass LocalDatabase installed on the same machine.
+    - You can download Mongo DB Compass Here <https://downloads.mongodb.com/compass/>
