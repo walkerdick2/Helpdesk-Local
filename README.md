@@ -44,3 +44,11 @@
       - [X] URGENCY - Number 0 - 5
       - [X] CREATED AT - Date/Time
       - [X] UPDATED AT - Date/Time
+
+
+Note: The software depends on the following software:
+  - Node.js
+    - If you clone this Github Repository you should have all of the packages.
+  -Mongo DB  
+  - Mongo DB Compass LocalDatabase installed on the same machine.
+  - You can download Mongo DB Compass Here <https://downloads.mongodb.com/compass/mongodb-compass-1.25.0-win32-x64.msi>

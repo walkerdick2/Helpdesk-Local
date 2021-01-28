@@ -16,7 +16,7 @@ require('dotenv').config;
 const middleware = require('./middleware')
 const tickets = require('./api/tickets')
 
-mongoose.connect("mongodb://localhost:27017/helpdesk-local", {
+mongoose.connect("mongodb://localhost:27017/helpdesk", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
